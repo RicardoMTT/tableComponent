@@ -1,40 +1,61 @@
-<ngx-select [items]="itemsTest" [optionValueField]="'name'" [optionTextField]="'lastName'" [formControl]="ngxControl"></ngx-select>
+<ngx-select
+  [items]="itemsTest"
+  [optionValueField]="'name'"
+  [optionTextField]="'lastName'"
+  [formControl]="ngxControl"
+></ngx-select>
 
 <dialog #dialog>
-  <p>ga</p>
-  
+  <p>gaea</p>
   <button (click)="dialog.close()">OK</button>
 </dialog>
-
+<p>
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, unde at soluta
+  natus vel exercitationem ea eaque laborum laboriosam esse!
+  rama develop
+</p>
 <button (click)="dialog.showModal()">open</button>
 <div>
   <h1>¿Eres peruano?</h1>
   <button (mouseover)="moveNo()">Sí</button>
-  <button #noButton  (mouseover)="moveNo()">No</button>
+  <button #noButton (mouseover)="moveNo()">No</button>
 </div>
 <form [formGroup]="searchForm">
   <input type="text" formControlName="searchText" placeholder="Buscar" />
 </form>
 
 <div class="customers__table">
-  <table
-    id="customers-table"
-    class="table"
-  >
+  <table id="customers-table" class="table">
     <thead>
       <tr>
         <th scope="col" class="noselect">{{ "Image" }}</th>
-        <th scope="col" class="cursor noselect" (click)="sortBy('title')">{{ "Title" }}</th>
-        <th scope="col" class="cursor noselect" (click)="sortBy('instructor.first_name')">
+        <th scope="col" class="cursor noselect" (click)="sortBy('title')">
+          {{ "Title" }}
+        </th>
+        <th
+          scope="col"
+          class="cursor noselect"
+          (click)="sortBy('instructor.first_name')"
+        >
           {{ "Instructor" }}
         </th>
-        <th scope="col" class="cursor noselect" (click)="sortBy('category.slug')">
+        <th
+          scope="col"
+          class="cursor noselect"
+          (click)="sortBy('category.slug')"
+        >
           {{ "Category" }}
         </th>
-        <th scope="col" class="cursor noselect" (click)="sortBy('subcategory.slug')">
+        <th
+          scope="col"
+          class="cursor noselect"
+          (click)="sortBy('subcategory.slug')"
+        >
           {{ "Subcategory" }}
         </th>
-        <th scope="col" class="cursor noselect" (click)="sortBy('price')">{{ "Price" }}</th>
+        <th scope="col" class="cursor noselect" (click)="sortBy('price')">
+          {{ "Price" }}
+        </th>
         <th scope="col" class="noselect">{{ "Action" }}</th>
       </tr>
     </thead>
@@ -112,4 +133,3 @@
     </tbody>
   </table>
 </div>
-
